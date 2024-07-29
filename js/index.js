@@ -1,16 +1,16 @@
 import { createElement } from "./function.js";
 
-import (createElement)
+import(createElement)
 
 let card = document.getElementById('button__image');
-let like =  document.getElementById('button__like');
+let like = document.getElementById('button__like');
 
 let buttonFilter = document.getElementById('filter2');
 let costFilter = document.getElementById('filter__cost');
 let priceFilter = document.getElementById('filter__price');
 
 let changeWeb = document.getElementById('image__change');
-let stark = document.getElementById('change__img');
+
 let wrappwr = document.getElementById('covers');
 let wrapper2 = document.getElementById('wrapper2')
 
@@ -30,19 +30,21 @@ document.addEventListener('DOMContentLoaded', function () {
                     let card = createElement(produc)
                     wrappwr.innerHTML += card
                 })
+
+                
+
+
+                let cards = this.querySelectorAll('.cover_wrapper');
+                cards.length && cards.forEach(card => {
+                    card.addEventListener('click', function () {
+                        let id = this.getAttribute('data-id');
+                        let cut = window.location.href.split('/html')[0];
+                        window.location.assign(`${cut}/html/price.html?id=${id}`)
+                    })
+                })
+
             }
 
-            let cards = this.querySelectorAll('.cover_wrapper');
-            cards.length && cards.forEach(card =>{
-                card.addEventListener('click', function(){
-                    let id = this.getAttribute('data-id');
-                    let cut = window.location.href.split('/html')[0];
-                    window.location.assign(`${cut}/html/price.html?id=${id}`)
-                })
-            })
-
-
-           
         })
         .catch(err => {
             console.log(err);
@@ -59,19 +61,19 @@ document.addEventListener('DOMContentLoaded', function () {
                     let card = createElement(el)
                     wrapper2.innerHTML += card
                 })
-                
-            
-                
+
+
+
             }
 
             let cards = this.querySelectorAll('.cover_wrapper');
-            cards.length && cards.forEach(card =>{
-                card.addEventListener('click', function(){
+            cards.length && cards.forEach(card => {
+                card.addEventListener('click', function () {
                     let id = this.getAttribute('data-id');
                     window.location.assign(`http://127.0.0.1:5501/html/price.html?id=${id}`)
                 })
             })
-           
+
         })
         .catch(err => {
             console.log(err);
@@ -79,11 +81,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 })
 
-card && card.addEventListener('click', function(event){
+card && card.addEventListener('click', function (event) {
     event.preventDefault();
     let cut = window.location.href.split('/index')[0];
     window.location.assign(`${cut}/html/card.html`)
-    
+
 })
 
 
@@ -94,23 +96,23 @@ card && card.addEventListener('click', function(event){
 
 
 
-filter && filter.addEventListener('change', function(){
+filter && filter.addEventListener('change', function () {
     fetch('https://cars-pagination.onrender.com/products/filter?minPrice=20000&maxPrice=40000')
         .then(res => res.json())
         .then(data => {
             let select = this.value;
             let res = data.filter(el => {
-                if(select == 'mashur'){
+                if (select == 'mashur') {
                     return el.star == 5;
                 }
-                if(select == 'urtacha'){
+                if (select == 'urtacha') {
                     return el.star == 3;
                 }
-                if(select == 'past'){
+                if (select == 'past') {
                     return el.star == 2;
                 }
-                if(select == 'all'){
-                  //confirm('Bilmaganlikka olamiz')
+                if (select == 'all') {
+                    //confirm('Bilmaganlikka olamiz')
                 }
             })
             wrappwr.innerHTML = '';
