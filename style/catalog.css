@@ -1,0 +1,120 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+.continer{
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+}
+body{
+    font-family: 'Inter';
+    font-size: 16px;
+}
+.skidka{
+    background-color: #454F5B;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 452px;
+    
+
+   
+}
+.continer_skidka{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 197px;
+}
+.continer_skidka h4{
+font-weight: 500px;
+color: #FFFFFF;
+letter-spacing: 12%;
+line-height: 26px;
+}
+.continer_skidka a{
+font-weight: 500px;
+color: #FFFFFF;
+letter-spacing: 12%;
+line-height: 26px;
+padding-right: 100px;
+}
+/*header boshlanish*/
+.header{
+    padding: 20px 100px;
+    margin-bottom: 20px;
+    background-color: #FFFFFF;
+    box-shadow: 0 -1px 0 #C4CDD5;
+    font-size: 20px;
+    position: fixed;
+    width: 100%;
+    border-bottom: 1px solid #C4CDD5;
+    
+
+}
+.continer_header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 283px;
+   
+    
+}
+.continer_header .header_logo img{
+    width: 50.4px;
+    height: 42px;
+    cursor: pointer;
+}
+.continer_header .header_logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 101px;
+}
+.continer_header .header_logo .header_link ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+}
+.continer_header .header_logo .header_link ul li{
+    list-style: none;
+}
+.continer_header .header_logo .header_link ul li a{
+    text-decoration: none;
+    color: #161C24;
+    font-weight: 300;
+    line-height: 23px;
+    transition: all 0.5s;
+}
+.continer_header .header_logo .header_link ul li a:hover{
+    color: #454F5B;
+}
+.continer_header .contact_header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+.continer_header .contact_header #calls{
+    position: absolute;
+    right: 415px;
+    cursor: pointer;
+}
+.continer_header .contact_header #button__like, #button__image{
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+}
+#covers{
+    margin-top: 100px;
+}

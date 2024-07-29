@@ -1,0 +1,56 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Inter';
+    font-size: 18px;
+}
+#wrapper{
+    width: 800px;
+    margin: 200px auto;
+    background-color: #FFFFFF;
+    display: none;
+}
+#wrapper #cover{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 90px;
+}
+#wrapper #cover img{
+    width: 100%;
+    background-image: white;
+}
+#wrapper #cover .infos h3{
+   font-size: 30px;
+   text-align: start;
+   color: #000000;
+   margin-bottom: 25px;
+   line-height: 40px;
+   padding-left: 0;
+}
+#wrapper #cover p{
+    margin-bottom: 16px;
+    color: rgba(69, 79, 91, 1);
+    font-size: 18px;
+    line-height: 32px;
+   
+}
+.sum{
+    color: rgba(69, 79, 91, 1);
+    margin-bottom: 8px;
+}
+.infos span{
+    display: inline-block;
+    color: #000000;
+    margin-bottom: 18px;
+}
+#old{
+    color: rgb(0, 0, 0, 0.4);
+    text-decoration: line-through;
+}
+.button{
+    display: block;
+}
