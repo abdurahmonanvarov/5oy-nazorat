@@ -22,6 +22,7 @@ body{
 #wrapper #cover img{
     width: 100%;
     background-image: white;
+    border-radius: 10px;
 }
 #wrapper #cover .infos h3{
    font-size: 30px;

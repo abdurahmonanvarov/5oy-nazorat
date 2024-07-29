@@ -7,6 +7,7 @@ let newPrice = document.getElementById('new');
 let button = document.getElementById('button');
 let select = document.getElementById('select')
 let allSum = document.getElementById('allsum')
+const buttonFirstPage = document.getElementById('button3')
 
 document.addEventListener('DOMContentLoaded', function () {
     let url = window.location.href;
@@ -25,8 +26,18 @@ document.addEventListener('DOMContentLoaded', function () {
                 
                 button && button.addEventListener('click', function(event){
                     event.preventDefault();
-                    console.log(select.value);
+                    if (select.value){
+                        let all = allSum;
+                        const price = select.value * all;
 
+                        return price
+                    }
+
+                })
+
+                buttonFirstPage && buttonFirstPage.addEventListener('click', function(){
+                    let cut = window.location.href.split('/html')[0];
+                    window.location.assign(`${cut}/index.html`)
                 })
 
 
