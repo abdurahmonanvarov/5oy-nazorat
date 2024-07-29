@@ -12,7 +12,7 @@ function createElement(data) {
                             </div>
                             <div class="ptodact">
                                 <img src="./image/gift.svg" width="12" height="12" alt="">
-                                <p id="jkj">Подарок</p>
+                                <p id="jkj"></p>
                             </div>
                         </div>
                         <div class="three">

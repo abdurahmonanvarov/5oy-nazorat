@@ -3,6 +3,7 @@ import { createElement } from "./function.js";
 import (createElement)
 
 let card = document.getElementById('button__image');
+let like =  document.getElementById('button__like');
 
 let buttonFilter = document.getElementById('filter2');
 let costFilter = document.getElementById('filter__cost');
@@ -80,9 +81,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
 card && card.addEventListener('click', function(event){
     event.preventDefault();
-    let cut = window.location.href.split('/html')[0];
-    window.location.assign(`${cut}/html/card.html?id=${id}`)
+    let cut = window.location.href.split('/index')[0];
+    window.location.assign(`${cut}/html/card.html`)
+    
 })
+
+
+
+
+
+
+
+
 
 filter && filter.addEventListener('change', function(){
     fetch('https://cars-pagination.onrender.com/products/filter?minPrice=20000&maxPrice=40000')
@@ -113,30 +123,5 @@ filter && filter.addEventListener('change', function(){
             console.log(err);
         })
 })
-
-buttonFilter && buttonFilter.addEventListener('click', function(event){
-    event.preventDefault();
-    
-    fetch('https://cars-pagination.onrender.com/products')
-        .then(res => res.json())
-        .then(data => {
-           
-
-           
-        })
-        .catch(err => {
-            console.log(err);
-        })
-
-     
-    
-})
-
-
-
-
-// filter && filter.addEventListener('change', function(){
-//     let = 
-// })
 
 

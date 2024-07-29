@@ -42,8 +42,8 @@ padding-right: 100px;
     background-color: #FFFFFF;
     box-shadow: 0 -1px 0 #C4CDD5;
     font-size: 20px;
-    position: fixed;
-    width: 100%;
+    position: sticky;
+    top: 0;
     border-bottom: 1px solid #C4CDD5;
 }
 .continer_header{
